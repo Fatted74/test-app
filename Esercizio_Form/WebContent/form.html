@@ -1,0 +1,117 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+    <title>FORM</title>
+    </head>
+
+    <body bgcolor="#E6E6FA">
+        <h1 align="center" style="color: blue;font-size:50px">TicketLive</h1>
+        <img src="TicketLive.png" width="100" height="100">
+        <h2>Inserisci i dati e clicca su "Ordina" per completare</h2>
+        <p>
+            Informazioni da compilare:
+            <ol>
+                <li>Selezione del Ticket</li>
+                <li>Dati Utente</li>
+                <li>Dati Spedizione</li>
+                <li>Metodo di Pagamento</li>
+            </ol>
+        </p>
+
+        <form action="http://localhost:8080/Esercizio_FORM/form.html" method="POST">
+            
+            <fieldset>
+                <legend>Seleziona il Ticket</legend>
+                <label for="artista">Seleziona il tuo Artista:</label>
+                <select name="artista" id="artista">
+                <option value="Noyz_Narcos">Noyz Narcos</option>
+                <option value="Clementino">Clementino</option>
+                <option value="Marracash">Marracash</option>
+                <option value="Salmo">Salmo</option>
+                <option value="Nitro">Nitro</option>
+                <option value="Tha_Supreme">Tha Supreme</option>
+                <option value="En?gma">En?gma</option>
+                <option value="Madman">Madman</option>
+                <option value="Gemitaiz">Gemitaiz</option>
+            </select><br>
+
+            <label>Numbero di Ticket:<input type="number" name="numeroTicket" min="1" max="10" value="1"></label><br>
+
+            <label>Tipologia Ticket:</label><br>
+            <input type="radio" id="Normal_edition" nome="tipologia" value="Normal_edition" checked>
+            <label for="Normal_Edition">Normal Edition</label><br>
+            <input type="radio" id="Gold_edition" nome="tipologia" value="Gold_edition">
+            <label for="Gold_Edition">Gold Edition</label><br>
+            <input type="radio" id="Vip_edition" nome="tipologia" value="Vip_edition">
+            <label for="Vip_Edition">Vip Edition</label><br>
+            <label>Data Live:<input type="date" name="DataLive" required></label>
+
+        </fieldset>
+            
+            
+            
+            <fieldset>
+                <legend>Dati Utente</legend> 
+                <label>Nome/ragione sociale:<input type="text" name="nome" value="" placeholder="Mario"  required></label><br>
+                <label>Cognome:<input type="text" name="cognome" value="" placeholder="Rossi" required></label><br>
+                <label>Partita IVA/Codice fiscale:<input type="text" name="p.iva/cf" value="" placeholder="RSSMRA21A01B963W" required></label><br>
+                <label>Passsword:<input type="password" name="password" value="" placeholder="Inserisci Password" required></label><br>
+                <label>Email:<input type="email" name="email" value="" placeholder="mario.rossi11@gamail.com"required></label><br>
+                <label>Numero di telefono:<input type="text" name="telefono" value="" placeholder="338275861"required></label><br>
+                <label>Sesso:</label><br>
+            		<input type="radio" id="male" name="sex" value="male" checked>
+            		<label for="male">Maschio</label><br>
+            		<input type="radio" id="female" name="sex" value="female">
+            		<label for="female">Femmina</label><br>
+			        <input type="radio" id="other" name="sex" value="other">
+			        <label for="other">Altro/Preferisco non dirlo</label>
+            </fieldset>
+
+            <fieldset>
+                <legend>Dati Spedizione</legend>
+                <label>Indirizzo:<input type="text" name="indirizzo" value="" placeholder="Via Sant'Agostino 11" required></label><br>
+                <label>CAP:<input type="text" name="CAP" value="" placeholder="81100" required></label><br>
+                <label>Città:<input type="text" name="città" value="" placeholder="Vairano"required></label><br>
+                <label>Provincia:<input type="text" name="provincia" value="" placeholder="Caserta"required></label><br>
+                <label>Come vuoi essere aggiornato sul tracking del pacco?</label><br>
+                <input type="checkbox" id="email" name="target" value="email"><label for="email">Aggiornamento tramite Email</label><br>
+                <input type="checkbox" id="telefono" name="target" value="telefono"><label for="telefono">Aggiornamento tramite SMS</label><br>
+                <input type="checkbox" id="chiamata" name="target" value="chiamata"><label for="chiamata">Aggiornamento tramite Chiamata</label><br>
+                
+            </fieldset>
+
+            <fieldset>
+                <legend>Metodo di Pagamento</legend>
+                <label for="pagamento">Carta di Credito:</label>
+                <select name="card" id="card">
+                <option value="cardVISA">Visa</option>
+                <option value="cardMasterCard">MasterCard</option>
+                <option value="cardAmerican_Express">American Express</option>
+                <option value="cardPaypal">Paypal</option>
+                <option value="cardAltro">Altro...</option>
+            </select><br>
+            <label>Codice segreto:<input type="text" name="pin" value="" placeholder="111" required></label><br>
+            <label>Nome Intestatario:<input type="text" name="intestatario" value="" placeholder="Mario Rossi" required></label><br>
+            <label>Data Scadenza:<input type="date" name="scadenza" required><br>
+            <label>Dettagli cliente:</label><br>
+            <textarea name="commenti"></textarea>
+            <p>
+                <input type="submit" value="Ordina">
+            </p>
+            </fieldset>
+
+            <p>
+                Il Ticket non verrà rimborsato in caso di:
+                <ul>
+                    <li>Smarrimento</li>
+                    <li>Scadenza tempo di rimborso</li>
+                    <li>Pagamento in cotrassegno</li>
+                </ul>
+            </p>
+        </form>
+    </body>
+
+
+
+</html>
